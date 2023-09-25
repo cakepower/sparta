@@ -1,0 +1,820 @@
+{% load django_bootstrap5 %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Welcome to Piu Barista Academy</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'piubarista/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'piubarista/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'piubarista/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'piubarista/vendor/animate.css/animate.css' %}" rel="stylesheet">
+  
+  <link href="{% static 'piubarista/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'piubarista/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'piubarista/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'piubarista/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'piubarista/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'piubarista/css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi d-none d-md-block bi-envelope d-flex align-items-center"><a href="mailto:piu0007@naver.com">piu0007@naver.com</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>031 8027 0665</span></i>
+      </div>
+
+      <div class="cta d-flex d-md-flex align-items-center">
+        <a href="https://map.naver.com/v5/entry/place/1092133137">네이버 플레이스</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">  
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href=""><span>Piu </span>Barista</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!--<a href="index.html"><img src="{% static 'piubarista/img/logo.jpg' %}" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero"><i class="bx bx-home"> </i>Home</a></li>
+          <li><a class="nav-link" href="https://www.instagram.com/piubarista"><i class="bx bxl-instagram"> </i>교육 이념</a></li>
+          <li><a class="nav-link" href="https://blog.naver.com/piubaristar"> <i class="bi bi-camera"> </i>네이버 블로그</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio"><i class="bi bi-building"> </i>강의시설</a></li>
+          <li class="dropdown"><a href="#why-us"><span><i class="bi bi-watch"> </i>교육과정</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="#services">바리스타 취업 과정</a></li>
+              <li><a class="nav-link scrollto" href="#services">취미 커피 과정</a></li>
+              <li><a class="nav-link scrollto" href="#services">로스팅 과정</a></li>
+              <li><a class="nav-link scrollto" href="#services">라떼아트 과정</a></li>
+              <li><a class="nav-link scrollto" href="#services">카페 메뉴 개발 과정</a></li>
+              <li><a class="nav-link scrollto" href="#services">카페 창업 과정</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#testimonials"><i class="bx bx-user"> </i>수강생리뷰</a></li>
+          <li><a class="nav-link scrollto" href="#team"><i class="bx bx-file-blank"> </i>강사진</a></li>              
+          <li><a class="nav-link scrollto" href="#contact"><i class="bi bi-truck-front"> </i>오시는길</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+
+    <div class="hero-container">
+      <div id="heroCarousel" data-bs-interval="4000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+          
+          <!-- Slide 1 -->
+          <div class="carousel-item active" style="background-image: url({% static 'piubarista/img/inside-011.jpg' %});">
+            <div class="carousel-container">
+              <div class="carousel-content ">
+                
+                <h2 class="animate__animated {% if device.is_small or device.is_xsmall %} animate__fadeInDownSmall {% else %} animate__fadeInDown {% endif %}"><span>Piu</span> Barista Academy</h2>     
+                <p class="animate__animated animate__fadeInUp" style="font-size: 20px; font-family: 'Spoqa Han Sans Neo', 'sans-serif'; word-break: keep-all;"><span>피우바리스타는</span> 젊고 감각적인 커피 전문 교육 기관입니다. 
+                <div>
+                  <a href="#why-us" class="btn-menu animate__animated animate__fadeInUp scrollto" style="font-family: 'Spoqa Han Sans Neo', 'sans-serif';">브랜드 가치</a>
+                  <a href="#contact" class="btn-book animate__animated animate__fadeInUp scrollto" style="font-family: 'Spoqa Han Sans Neo', 'sans-serif';">오시는 길</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Slide title logo -->
+        <div class="carousel-item" style="background-image: url( {% static 'piubarista/img/inside-007.jpg' %} );">
+          <div class="carousel-container">
+              <div class="carousel-content">
+          
+                <a class="animate__animated {% if device.is_small or device.is_xsmall %} animate__fadeInDownSmall {% else %} animate__fadeInDown {% endif %}" href="">
+                  <img src="{% static 'piubarista/img/logo_white_big.png' %}" alt="" class="img-fluid" style="max-width:90%;">
+                </a>
+          
+                <p> </p><p> </p>
+              </div>
+          </div>
+        </div>
+
+         <!-- Slide 2 -->
+          <div class="carousel-item" style="background-image: url({% static 'piubarista/img/inside-006.jpg' %});">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated {% if device.is_small or device.is_xsmall %} animate__fadeInDownSmall {% else %} animate__fadeInDown {% endif %}"><span>Piu</span> Coffee Lab</h2>
+
+                <p class="animate__animated animate__fadeInUp" style="font-size: 20px; word-break: keep-all;"> 블로그에서는 매달 최신 커피 소식을 전합니다.</p>
+                <div>
+                  <a href="https://blog.naver.com/piubaristar" class="btn-menu animate__animated animate__fadeInUp scrollto" style="font-family: 'Spoqa Han Sans Neo', 'sans-serif';">블로그 바로가기</a>
+                  <a href="https://talk.naver.com/ct/w4523m" class="btn-book animate__animated animate__fadeInUp scrollto" style="font-family: 'Spoqa Han Sans Neo', 'sans-serif';">톡톡 문의</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item" style="background-image: url( {% static 'piubarista/img/inside-008.jpg' %} );">
+            <div class="carousel-container">
+              <div class="carousel-content">         
+                <h2 class="animate__animated animate__fadeInDown"><span>Piu</span> Specialty Program</h2>
+
+                <p class="animate__animated animate__fadeInUp" style="font-size: 20px; font-family: 'Spoqa Han Sans Neo', 'sans-serif'; word-break: keep-all;"> 
+                  직장인을 위한 주말 단기 프로그램을 오픈합니다. 아래 문의 버튼을 누르시면 24시간 이내에 성실하게 답변을 드리겠습니다. </p>
+                <div>
+                  <a href="#why-us" class="btn-menu animate__animated animate__fadeInUp scrollto" style="font-family: 'Spoqa Han Sans Neo', 'sans-serif';">교육 프로그램</a>
+                  <a href="https://talk.naver.com/ct/w4523m" class="btn-book animate__animated animate__fadeInUp scrollto" style="font-family: 'Spoqa Han Sans Neo', 'sans-serif';">톡톡 문의</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="carousel-item" style="background-image: url( {% static 'piubarista/img/a03.JPG' %} );">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown"><span>Piu</span> Open Event</h2>
+                <p class="animate__animated animate__fadeInUp" style="font-size: 20px; font-family: 'Spoqa Han Sans Neo', 'sans-serif'; word-break: keep-all;"> 
+                  피우바리스타 아카데미는 1월에는 커피 센서리와 홈카페 특강이 있습니다. 아래 톡톡으로 신청하세요.</p>
+                <div>
+                  <a href="https://talk.naver.com/ct/w4523m" class="btn-book animate__animated animate__fadeInUp scrollto" style="font-family: 'Spoqa Han Sans Neo', 'sans-serif';">톡톡 문의</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </section><!-- End Hero -->  
+
+  <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+        <div class="row">
+          <div class="col-12" data-aos="fade-up">
+            <div class="content text-center" style="background-image:  url({% static 'piubarista/img/inside-011_dark.jpg' %});">
+              <h3 style="word-break: keep-all;">피우바리스타 아카데미는 SCA 커피 전문교육센터입니다. <br>
+                피우바리스타 아카데미에서 젊고 역동적인 커피문화를 즐겨보세요.<br> <br>
+                현재 6개의 특화된 교육과정을 운영하고 있습니다. </h3>
+              <div class="text-center">
+                <a href="https://talk.naver.com/ct/w4523m" class="more-btn">네이버 톡톡으로 문의하기</a>
+              </div><p> </p>
+              <p style="word-break: keep-all;">
+               네이버 톡톡으로 바로 문의해주세요.</h3>
+              </p>
+            </div>
+          </div>
+          </div>
+
+          <div class="row">
+          <div class="col-xl-12 col-md-0 col-sm-0 d-flex">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-2 col-md-4 col-sm-6 col-6  d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                  <div class="icon-box my-3 mx-0" style="background-image:  url({% static 'piubarista/img/beach/c01.jpg' %});">
+                    <div class="icon">
+                      <a href="{% static 'piubarista/img/program/p001.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="피우바리스타 아카데미">            
+                      <i class="bi bi-briefcase"></i></a></div>
+                    <h4 class="title">취업</h4>
+                    <p class="description">카페 단기 아르바이트 취업을 위한 바리스타 기본기 교육</p>
+                    <a href="{% static 'piubarista/img/program/p001.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="피우바리스타 아카데미">            
+                     More<i class="bx bx-chevrons-right"></i></a>
+                  </div>
+                </div>
+
+                <div class="col-xl-2  col-md-4 col-sm-6 col-6  d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                  <div class="icon-box my-3 mx-0" style="background-image:  url({% static 'piubarista/img/beach/c02.jpg' %});">
+                    <div class="icon">
+                      <a href="{% static 'piubarista/img/program/p002.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="피우바리스타 아카데미">            
+                      <i class="bi bi-card-checklist"></i></a></div>
+                    <h4 class="title">취미</h4>
+                    <p class="description">커피 머신없이 맛있는 커피를 즐길 수 있는 브루잉 교육</p>
+                    <a href="{% static 'piubarista/img/program/p002.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="피우바리스타 아카데미">            
+                    More<i class="bx bx-chevrons-right"></i></a>   
+                  </div>
+                </div>
+
+                <div class="col-xl-2 col-md-4 col-sm-6 col-6  d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">            
+                  <div class="icon-box my-3 mx-0" style="background-image:  url({% static 'piubarista/img/beach/c03.jpg' %});">
+                    <div class="icon">
+                      <a href="{% static 'piubarista/img/program/p003.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="피우바리스타 아카데미">            
+                      <i class="bi bi-bar-chart"></i></a></div>
+                    <h4 class="title">크리에이티브</h4>
+                    <p class="description">달콤하고 쌉싸름한 커피베이스의 다양한 음료 개발</p>
+                    <a href="{% static 'piubarista/img/program/p003.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="피우바리스타 아카데미">            
+                      More<i class="bx bx-chevrons-right"></i></a>  
+                  </div>
+                </div>     
+
+                <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6  d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                  <div class="icon-box my-3 mx-0" style="background-image:  url({% static 'piubarista/img/beach/c04.jpg' %});">
+                    <div class="icon">
+                      <a href="{% static 'piubarista/img/program/p004.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="피우바리스타 아카데미">            
+                      <i class="bi bi-binoculars"></i></a></div>
+                    <h4 class="title">창업</h4>
+                    <p class="description">카페 브랜딩과 홈페이지 개발 및 홍보 전략 개발</p>
+                  <a href="{% static 'piubarista/img/program/p004.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="피우바리스타 아카데미">            
+                    More<i class="bx bx-chevrons-right"></i></a>     
+                  </div>
+                </div>
+      
+                <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6  d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                  <div class="icon-box mx-0 my-3" style="background-image:  url({% static 'piubarista/img/beach/c01.jpg' %});">
+                    <div class="icon">
+                      <a href="{% static 'piubarista/img/program/p005.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="피우바리스타 아카데미">            
+                       <i class="bi bi-brightness-high"></i></a></div>
+                    <h4 class="title">로스팅</h4>
+                    <p class="description">로스터기를 직접 사용하여 원두를 볶는 과정</p>
+                    <a href="{% static 'piubarista/img/program/p005.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="피우바리스타 아카데미">            
+                      More<i class="bx bx-chevrons-right"></i></a>   
+                  </div>
+              </div>
+
+              <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6  d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box mx-0 my-3" style="background-image:  url({% static 'piubarista/img/beach/c02.jpg' %});">
+                  <div class="icon">
+                    <a href="{% static 'piubarista/img/program/p006.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="피우바리스타 아카데미">            
+                    <i class="bi bi-images"></i></a></div>
+                  <h4 class="title">라떼아트</h4>
+                  <p class="description">에스프레소 위에 다양한 모양의 우유 거품 장식을 만드는 과정</p>
+                  <a href="{% static 'piubarista/img/program/p006.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="피우바리스타 아카데미">            
+                    More<i class="bx bx-chevrons-right"></i></a>   
+                </div>
+              </div>         
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>교육프로그램</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-6 col-sm-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box my-2 mx-0">
+              <div class="icon"><i class="bi bi-briefcase"></i></div>
+              <h4 class="title">취업</h4>
+              <p class="description"></p>
+                <a href="{% static 'piubarista/img/program/p001.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="피우바리스타 아카데미">            
+               </a>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box my-2 mx-0">
+              <div class="icon"><i class="bi bi-card-checklist"></i></div>
+              <h4 class="title">취미</h4>
+              <p class="description"></p>
+              <a href="{% static 'piubarista/img/program/p002.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="피우바리스타 아카데미">            
+              </a>   
+            </div>
+
+          </div>
+          <div class="col-6 col-sm-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">            
+            <div class="icon-box my-2 mx-0">
+              <div class="icon"><i class="bi bi-bar-chart"></i></div>
+              <h4 class="title">크리에이티브</h4>
+              <p class="description"></p>
+              <a href="{% static 'piubarista/img/program/p003.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="피우바리스타 아카데미">            
+                </a>  
+            </div>
+
+          </div>
+          <div class="col-6 col-sm-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box my-2 mx-0">
+              <div class="icon"><i class="bi bi-binoculars"></i></div>
+              <h4 class="title">창업</h4>
+              <p class="description"></p>
+            <a href="{% static 'piubarista/img/program/p004.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="피우바리스타 아카데미">            
+              </a>     
+            </div>
+          </div>
+
+          <div class="col-6 col-sm-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box mx-0 my-2">
+              <div class="icon"><i class="bi bi-brightness-high"></i></div>
+              <h4 class="title">로스팅</h4>
+              <p class="description"></p>
+              <a href="{% static 'piubarista/img/program/p005.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="피우바리스타 아카데미">            
+                </a>   
+            </div>
+
+          </div>
+          <div class="col-6 col-sm-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box mx-0 my-2" style="background-size:cover; background-image: url({% static 'piubarista/img/portfolio/latte_art.gif' %});">
+              <div class="icon"><i class="bi bi-images"></i></div>
+              <h4 class="title">라떼아트</h4>
+              <p class="description"> </p>
+              <a href="{% static 'piubarista/img/program/p006.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="피우바리스타 아카데미">            
+                 </a>   
+            </div>
+
+          </div>         
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-aos="fade-up">강의시설</h2>
+        </div>
+        <!--
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">강의실</li>
+              <li data-filter=".filter-card">로스팅</li>
+              <li data-filter=".filter-web">라떼 아트</li>
+            </ul>
+          </div>
+        </div>  -->
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-6 col-lg-4 col-md-4 portfolio-item filter-app">
+            <img src="{% static 'piubarista/img/portfolio/portfolio-1.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>LA Room</h4>
+              <p>강의실</p>
+              <a href="{% static 'piubarista/img/portfolio/portfolio-1.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="강의실"><i class="bx bx-plus"></i></a>
+               
+            </div>
+          </div>
+
+          <div class="col-6  col-lg-4 col-md-4 portfolio-item filter-web">
+            <img src="{% static 'piubarista/img/portfolio/portfolio-2.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>LA Room</h4>
+              <p>강의실</p>
+              <a href="{% static 'piubarista/img/portfolio/portfolio-2.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="강의실"><i class="bx bx-plus"></i></a>
+               
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-4 col-md-4 portfolio-item filter-app">
+            <img src="{% static 'piubarista/img/portfolio/portfolio-3.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>LA Room</h4>
+              <p>강의실</p>
+              <a href="{% static 'piubarista/img/portfolio/portfolio-3.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="강의실"><i class="bx bx-plus"></i></a>
+               
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-4 col-md-4 portfolio-item filter-card">
+            <img src="{% static 'piubarista/img/portfolio/portfolio-4.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>SanF Room</h4>
+              <p>강의실</p>
+              <a href="{% static 'piubarista/img/portfolio/portfolio-4.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="강의실"><i class="bx bx-plus"></i></a>
+               
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-4 col-md-4 portfolio-item filter-web">
+            <img src="{% static 'piubarista/img/portfolio/portfolio-5.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>SanF Room</h4>
+              <p>프런트</p>
+              <a href="{% static 'piubarista/img/portfolio/portfolio-5.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="프런트"><i class="bx bx-plus"></i></a>
+               
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-4 col-md-4 portfolio-item filter-app">
+            <img src="{% static 'piubarista/img/portfolio/portfolio-6.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>SanF Room</h4>
+              <p>강의실</p>
+              <a href="{% static 'piubarista/img/portfolio/portfolio-6.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="프런트"><i class="bx bx-plus"></i></a>
+               
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-4 col-md-4 portfolio-item filter-card">
+            <img src="{% static 'piubarista/img/portfolio/portfolio-7.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>LA Room</h4>
+              <p>로스팅</p>
+              <a href="{% static 'piubarista/img/portfolio/portfolio-7.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="로스팅"><i class="bx bx-plus"></i></a>
+               
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-4 col-md-4 portfolio-item filter-card">
+            <img src="{% static 'piubarista/img/portfolio/portfolio-8.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>LA Room</h4>
+              <p>로스팅</p>
+              <a href="{% static 'piubarista/img/portfolio/portfolio-8.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="로스팅"><i class="bx bx-plus"></i></a>
+               
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-4 col-md-4 portfolio-item filter-web">
+            <img src="{% static 'piubarista/img/portfolio/portfolio-9.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>LatteArt</h4>
+              <p>라떼아트</p>
+              <a href="{% static 'piubarista/img/portfolio/portfolio-9.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="라떼아트"><i class="bx bx-plus"></i></a>
+               
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-4 col-md-4 portfolio-item filter-web">
+            <img src="{% static 'piubarista/img/portfolio/portfolio-10.gif' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>LatteArt</h4>
+              <p>라떼아트</p>
+              <a href="{% static 'piubarista/img/portfolio/portfolio-10.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="라떼아트"><i class="bx bx-plus"></i></a>
+               
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 col-md-4 portfolio-item filter-web">
+            <img src="{% static 'piubarista/img/portfolio/portfolio-11.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>LatteArt</h4>
+              <p>라떼아트</p>
+              <a href="{% static 'piubarista/img/portfolio/portfolio-11.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="라떼아트"><i class="bx bx-plus"></i></a>
+               
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 col-md-4 portfolio-item filter-web">
+            <img src="{% static 'piubarista/img/portfolio/portfolio-12.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>LatteArt</h4>
+              <p>라떼아트</p>
+              <a href="{% static 'piubarista/img/portfolio/portfolio-12.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="라떼아트"><i class="bx bx-plus"></i></a>
+               
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 col-md-4 portfolio-item filter-web">
+            <img src="{% static 'piubarista/img/portfolio/portfolio-13.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>LatteArt</h4>
+              <p>라떼아트</p>
+              <a href="{% static 'piubarista/img/portfolio/portfolio-13.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="라떼아트"><i class="bx bx-plus"></i></a>
+               
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 col-md-4 portfolio-item filter-web">
+            <img src="{% static 'piubarista/img/portfolio/portfolio-14.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>라떼 아트</h4>
+              <p>Latte Art</p>
+              <a href="{% static 'piubarista/img/portfolio/portfolio-14.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="라떼아트"><i class="bx bx-plus"></i></a>
+               
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 col-md-4 portfolio-item filter-web">
+            <img src="{% static 'piubarista/img/portfolio/portfolio-15.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>라떼 아트</h4>
+              <p>Latte Art</p>
+              <a href="{% static 'piubarista/img/portfolio/portfolio-15.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="라떼아트"><i class="bx bx-plus"></i></a>
+               
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 col-md-4 portfolio-item filter-web" style="text-align: justify;">
+            <img src="{% static 'piubarista/img/portfolio/portfolio-16.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>라떼 아트</h4>
+              <p>Latte Art</p>
+              <a href="{% static 'piubarista/img/portfolio/portfolio-16.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="라떼아트"><i class="bx bx-plus"></i></a>
+            </div>
+          </div>                                                            
+        </div>
+
+      </div>
+    </section> <!-- End Portfolio Section -->    
+
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container position-relative">
+        <div class="section-title">
+          <h2><span>수강생</span> 이야기</h2>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'piubarista/img/testimonials/yeunjin01.jpeg' %}" class="testimonial-img" alt="">
+                <h3>뽀뽀둘째누나</h3>
+                <h4>커피 브루잉수업 수강생</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  친구랑 같이 브루잉 수업 등록해서 들었는 데, 너무 만족스러웠어요. 처음이라
+                  브루잉하는 법도 하나도 몰랐는데, 정말 친절하고 열심히 알려주셔서 이해하기
+                  쉬웠어요.ㅎㅎ 
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p> 
+                <p>
+                  확실히 선생님이 내려주신 게 제일 맛있더라고요. ㅋㅋㅋ
+                  로스팅도 직접하신 원두라고 들었는데, 와우.. 향미가 대박이었어요! 그리고 어떻게
+                  해야 더 맛있는 커피를 만들 수 있는지 세세하게 알려주셔서, 수업하면서 점점
+                  밸런스가 맞는 맛으로 제가 조절할 수 있게되니까 너무 신기하고 재미있었어요.
+                  히히 기회가 되면 다른 수업들도 들어보고 싶어요.
+                </p>  
+                
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'piubarista/img/testimonials/yeunjin02.jpeg' %}" class="testimonial-img" alt="">
+                <h3>Jeongs97</h3>
+                <h4>브루잉 수업 수강생</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  브루잉 수업을 들었는데 핸드드립을 처음 해보는거라 조금 걱정했는데 모르는 사람들도 이해하기 쉽게 하나하나
+                  설명해주셔서 귀에 쏙쏙 들어왔어요!! 
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p> 
+                <p>
+                  도구들이 많아
+                  여러 도구들을 접할 수 있어서 좋았고 시설도 깔끔해서 관리를 잘하시는 것 같았어요! 다른 수업도 들어보고 싶어용. 추천합니당!! 
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'piubarista/img/testimonials/jeongbum01.jpg' %}" class="testimonial-img" alt="">
+                <h3>이재범</h3>
+                <h4>바리스타 취업반 수강생</h4>
+                <p>
+                  바리스타 취업반 수강중이에요~ 선생님의 쪽집게 지도 덕분에 벌써 귀여운 카푸치노를 만들 수 있게 되었답니다.
+                  시설도 깨끗하고 아늑해요~
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'piubarista/img/testimonials/testimonials.jpg' %}" class="testimonial-img" alt="">
+                <h3>Sunny111</h3>
+                <h4>브루잉 수업 수강생</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  선생님이 매우 체계적이고 친절하게 설명을 잘해주세요. 배우는 데 지루하지 않고 재미있습니다. 
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  <p>
+                    하남에서 최고에요!!!
+                  </p>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'piubarista/img/testimonials/testimonials.jpg' %}" class="testimonial-img" alt="">
+                <h3>fla****</h3>
+                <h4>브루잉 수업 수강생</h4>
+                <p>
+                  시설이 깨끗하고 선생님이 너무 상세하게 잘 가르쳐주셔서 모르는 거 없이 잘 배웠습니다. 그리고
+                  차를 가지고 와도 주차장도 널널해서 여유가 많아서 좋았어요. 상담받았을때 여러 프로그램도
+                  유용한게 많아서 저는 브루잉 수업끝나면 하려고요. 
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'piubarista/img/testimonials/testimonials.jpg' %}" class="testimonial-img" alt="">
+                <h3>jini327</h3>
+                <h4>바리스타 취업반 수강생</h4>
+                <p>
+                  새로 오픈한 곳이라 그런지 시설도 깔끔하고 선생님도 너무 좋으시네요~ 수업도
+                  재밌고 빨리 바리스타 자격증따고 싶어요~^^
+                  
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+
+
+  <section id="contact" class="contact">
+    <div class="container">
+
+      <div class="section-title">
+        <h2><span>Contact</span> Us</h2>
+        <p>미사역 타워 9번 출구로 나오신 후, 뚜레주르가 일층에 보이는 건물로 오시면 됩니다.</p>
+      </div>
+    </div>
+
+    <div class="map">
+      <div class="mapouter"><div class="gmap_canvas">
+        <iframe style="border:0; width:100%; height:350px;" src="https://maps.google.com/maps?q=%EB%AF%B8%EC%82%AC%EC%A0%84%EC%B2%A0%EC%97%AD&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" allowfullscreen></iframe>
+        
+
+      <!-- <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe> -->
+    </div>
+
+    <div class="container mt-5">
+
+      <div class="info-wrap">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 info">
+            <i class="bi bi-geo-alt"></i>
+            <h4>Location:</h4>
+            <p>미사역 타워 4층 406호<br>하남, 미사</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+            <i class="bi bi-clock"></i>
+            <h4>Open Hours:</h4>
+            <p>Monday-Saturday:<br>11:00 AM - 2300 PM</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+            <i class="bi bi-envelope"></i>
+            <h4>Email:</h4>
+            <p>cakepower@gmail.com<br>cakepower@naver.com</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+            <i class="bi bi-phone"></i>
+            <h4>Call:</h4>
+            <p>+82 10 2402 9751<br>+82 10 2402 9751</p>
+          </div>
+        </div>
+      </div>
+
+      <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="col-md-6 form-group mt-3 mt-md-0">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+          </div>
+        </div>
+        <div class="form-group mt-3">
+          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+        </div>
+        <div class="form-group mt-3">
+          <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+        </div>
+        <div class="my-3">
+          <div class="loading">Loading</div>
+          <div class="error-message"></div>
+          <div class="sent-message">Your message has been sent. Thank you!</div>
+        </div>
+        <div class="text-center"><button type="submit">Send Message</button></div>
+      </form>
+
+    </div>
+  </section><!-- End Contact Section -->
+    
+  </main><!-- End #main -->
+
+  <!-- ======= Footer =======
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Flexor</h3>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    End Footer -->
+    <footer>
+    <div class="container d-lg-flex py-4">
+
+      <div class="me-lg-auto text-center text-lg-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Flexor</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexor-free-multipurpose-bootstrap-template/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-lg-right pt-3 pt-lg-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer> 
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'piubarista/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'piubarista/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'piubarista/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'piubarista/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'piubarista/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'piubarista/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'piubarista/js/main.js' %}"></script>
+
+</body>
+
+</html>
